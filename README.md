@@ -1,17 +1,73 @@
 # CrewAI Studio
 
-Welcome to CrewAI Studio! This application provides a user-friendly interface written in Streamlit for interacting with CrewAI, suitable even for those who don't want to write any code. Follow the steps below to install and run the application on Windows or Linux (probably also MacOS) using either Conda or a virtual environment.
+[![GitHub Stars](https://img.shields.io/github/stars/strnad/CrewAI-Studio)](https://github.com/strnad/CrewAI-Studio/stargazers)
+[![License](https://img.shields.io/github/license/strnad/CrewAI-Studio)](https://github.com/strnad/CrewAI-Studio/blob/main/LICENSE)
+
+CrewAI Studio is a user-friendly graphical interface that helps you create and manage AI agent teams (crews) without writing code. Built with Streamlit, it provides an intuitive way to leverage the power of CrewAI for task automation and AI orchestration.
 
 ## Features
 
-- **Multi-platform support**: Works on Windows, Linux and MacOS.
-- **No coding required**: User-friendly interface for interacting with CrewAI.
-- **Conda and virtual environment support**: Choose between Conda and a Python virtual environment for installation.
-- **CrewAI tools** You can use crewai tools to interact with real world. ~~Crewai studio uses a forked version of crewai-tools with some bugfixes and enhancements (https://github.com/strnad/crewAI-tools)~~ (bugfixes already merged to crewai-tools)
-- **\*NEW\* Custom Tools** Custom tools for calling APIs and for writing files. More will be added soon
-- **API support**: Currently OpenAI, Groq, Anthropic and LM Studio backends are supported. OpenAI key is probably still needed for embeddings in many tools. Don't forget to load an embedding model when using LM Studio.
-- **Single Page app export**: Feature to export crew as simple single page streamlit app (doesn't support custom tools yet).
-- **Threaded crew run**: Crews can run in background and can be stopped.
+### Core Capabilities
+- **No-Code Interface**: Build and manage AI crews through an intuitive graphical interface
+- **Multi-Platform**: Works seamlessly on Windows, Linux, and MacOS
+- **Background Processing**: Run crews in separate threads with the ability to stop them
+- **Single-Page Export**: Export your crew as a standalone Streamlit application
+
+### AI Integration
+- **Multiple AI Backends**: Support for:
+  - OpenAI
+  - Groq
+  - Anthropic
+  - LM Studio (remember to load embedding models)
+- **CrewAI Tools**: Integrate with external services and real-world interactions
+- **Custom Tools**: API calling and file writing capabilities, with more coming soon
+
+## Prerequisites
+
+Before installation, ensure you have:
+- Python 3.8 or higher
+- Git (for cloning the repository)
+- Internet connection for downloading dependencies
+- API keys for your chosen AI provider(s)
+
+## System Requirements
+
+- Memory: Minimum 4GB RAM (8GB recommended)
+- Storage: 2GB free disk space
+- CPU: Dual-core processor or better
+- Internet: Broadband connection required for AI API calls
+
+## Quick Start
+
+1. **Install using your preferred method** (see Installation section below)
+2. **Set up your environment**:
+   ```bash
+   cp .env_example .env
+   # Edit .env with your API keys
+   ```
+3. **Launch the application** and open http://localhost:8501
+4. **Create your first crew**:
+   - Click "New Crew" 
+   - Add agents and define their roles
+   - Set up the execution task
+   - Click "Run" to start your crew
+
+## Basic Usage
+
+1. **Managing Crews**:
+   - Create new crews from the main dashboard
+   - Save crews for later use
+   - Export crews as standalone applications
+
+2. **Working with Agents**:
+   - Define agent roles and capabilities
+   - Set agent personalities and expertise levels
+   - Configure AI model settings per agent
+
+3. **Running Tasks**:
+   - Start/stop crew operations
+   - Monitor execution progress
+   - View task results and agent interactions
 
 ## Screenshots
 
@@ -149,6 +205,35 @@ In case of problems:
 - Delete the `venv/miniconda` folder and reinstall `crewai-studio`.
 - Rename `crewai.db` (it contains your crews but sometimes new versions can break compatibility).
 - Raise an issue and I will help you.
+
+## Common Issues
+
+1. **API Connection Errors**:
+   - Verify API keys in .env file
+   - Check internet connection
+   - Ensure API service is available
+
+2. **Installation Problems**:
+   - Clear Python cache: `pip cache purge`
+   - Update pip: `python -m pip install --upgrade pip`
+   - Check Python version compatibility
+
+3. **Runtime Errors**:
+   - Verify all dependencies are installed
+   - Check logs for detailed error messages
+   - Ensure sufficient system resources
+
+## Contributing
+
+We welcome contributions! Here's how you can help:
+
+1. Fork the repository
+2. Create a feature branch
+3. Commit your changes
+4. Push to the branch
+5. Submit a Pull Request
+
+Please ensure your code follows our style guidelines and includes appropriate tests.
 
 ## Video tutorial
 Video tutorial on CrewAI Studio made by Josh Poco
