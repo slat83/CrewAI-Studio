@@ -200,6 +200,64 @@ docker-compose up --build
 
 Before running the application, ensure you update the `.env` file with your API keys and other necessary configurations. An example `.env` file is provided for reference.
 
+## Running Tests
+
+CrewAI Studio includes a comprehensive test suite to ensure code quality and functionality. To run the tests:
+
+### Prerequisites
+
+Ensure you have the testing dependencies installed:
+```bash
+pip install pytest pytest-cov pytest-mock coverage
+```
+
+Or simply install all dependencies including test requirements:
+```bash
+pip install -r requirements.txt
+```
+
+### Running the Tests
+
+1. **Run all tests**:
+   ```bash
+   pytest
+   ```
+
+2. **Run tests with coverage report**:
+   ```bash
+   pytest --cov=app
+   ```
+
+3. **Generate HTML coverage report**:
+   ```bash
+   pytest --cov=app --cov-report=html
+   ```
+   This will create a `htmlcov` directory with an HTML report that you can open in your browser.
+
+4. **Run specific test file**:
+   ```bash
+   pytest test/test_app.py
+   ```
+
+5. **Run tests with verbose output**:
+   ```bash
+   pytest -v
+   ```
+
+### Test Structure
+
+The test suite is organized as follows:
+- `test/test_app.py`: Unit tests for the main application
+- `test/test_app_integration.py`: Integration tests for app dependencies
+- `test/test_app_ui.py`: UI-specific tests for Streamlit components
+
+### Troubleshooting Tests
+
+If you encounter test failures:
+1. Ensure all dependencies are correctly installed
+2. Check that your Python version is compatible
+3. Verify that the app structure hasn't changed significantly since the tests were written
+
 ## Troubleshooting
 In case of problems:
 - Delete the `venv/miniconda` folder and reinstall `crewai-studio`.

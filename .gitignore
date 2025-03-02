@@ -10,6 +10,13 @@ flatten_all_files_for_gpt.py
 .vs
 .vs/
 .vs/*
+htmlcov/
+htmlcov
+htmlcov/*
+__pycache__/
+.pytest_cache/
+.pytest_cache
+.pytest_cache/*
 vscode
 .env
 app/__pycache__
